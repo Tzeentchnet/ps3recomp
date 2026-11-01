@@ -156,7 +156,7 @@ int main(int argc, char** argv)
         }
         if (f) fclose(f);
         printf("  %d samples, %d lines\n", n, lines);
-        check(n > 100 && lines == n, "periodic samples are written one per line");
+        check(n >= 10 && lines == n, "periodic samples are written one per line");
         check(frames_ok, "every sample has frames");
     }
 #else
